@@ -33,4 +33,7 @@ void print_array_2(int *array, int left, int right);
 void copy_array(int *array, int start, int end, int *newArray);
 void splitting(int *newArray, int *array, int left, int right);
 
+void heap_sort(int *array, size_t size);
+void heapify(int *arr, int n, int i, size_t size);
+
 #endif
