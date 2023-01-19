@@ -26,6 +26,11 @@ void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
+
 void merge_sort(int *array, size_t size);
+void merge(int *array, int *newArray, int left, int mid, int right);
+void print_array_2(int *array, int left, int right);
+void copy_array(int *array, int start, int end, int *newArray);
+void splitting(int *newArray, int *array, int left, int right); 
 
 #endif
