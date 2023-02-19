@@ -36,4 +36,7 @@ void splitting(int *newArray, int *array, int left, int right);
 void heap_sort(int *array, size_t size);
 void heapify(int *arr, int n, int i, size_t size);
 
+void radix_sort(int *array, size_t size);
+size_t maxValueLen(int *array, size_t size);
+void countingSort(int *array, size_t size, size_t place);
 #endif
