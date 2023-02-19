@@ -67,10 +67,10 @@ void countingSort(int *array, size_t size, size_t place)
 
 void radix_sort(int *array, size_t size)
 {
-	size_t place, digitCount = maxValueLen(array, size), i;
-
 	if (array && size > 1)
 	{
+		size_t place, digitCount = maxValueLen(array, size), i;
+
 		for (i = 1, place = 1; i <= digitCount; i++, place *= 10)
 		{
 			countingSort(array, size, place);
