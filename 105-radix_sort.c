@@ -69,7 +69,7 @@ void radix_sort(int *array, size_t size)
 {
 	size_t place, digitCount = maxValueLen(array, size), i;
 
-	if (array && size)
+	if (array && size > 1)
 	{
 		for (i = 1, place = 1; i <= digitCount; i++, place *= 10)
 		{
