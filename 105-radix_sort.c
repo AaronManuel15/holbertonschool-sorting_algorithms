@@ -1,7 +1,6 @@
 #include "sort.h"
 #include <stdio.h>
-#include <math.h>
-#define BASE 10
+
 
 /**
  * maxValueLen - gets largest number in array and returns len of it
@@ -36,7 +35,7 @@ size_t maxValueLen(int *array, size_t size)
  */
 void countingSort(int *array, size_t size, size_t place)
 {
-	size_t output[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; 
+	size_t output[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	size_t count[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	size_t *temp = malloc(sizeof(*array) * size);
 	size_t i;
@@ -72,7 +71,7 @@ void radix_sort(int *array, size_t size)
 
 	if (array && size)
 	{
-		for (i = 1, place = 1; i <= digitCount; i++, place *= BASE)
+		for (i = 1, place = 1; i <= digitCount; i++, place *= 10)
 		{
 			countingSort(array, size, place);
 			print_array(array, size);
