@@ -30,9 +30,9 @@ size_t maxValueLen(int *array, size_t size)
  */
 void countingSort(int *array, size_t size, size_t place)
 {
-	size_t count[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-	size_t output[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-	size_t *temp = malloc(sizeof(*array) * size);
+	int count[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	int output[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	int *temp = malloc(sizeof(*array) * size);
 	size_t i;
 
 	for (i = 0; i < size; i++)
