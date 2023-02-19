@@ -36,7 +36,7 @@ size_t maxValueLen(int *array, size_t size)
  */
 void countingSort(int *array, size_t size, size_t place)
 {
-	int output[size], count[size], temp[size];
+	int output[(int)size], count[(int)size], temp[(int)size];
 	size_t i;
 
 	for (i = 0; i < size; ++i)
