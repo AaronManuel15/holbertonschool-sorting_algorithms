@@ -40,7 +40,7 @@ void countingSort(int *array, size_t size, size_t place)
 		count[(array[i] % (place * 10) / place)]++;
 	}
 	for (i = 0; i < 9 ; i++)
-		output[i + 1] += output[i] + count[i];
+		output[i + 1] = output[i] + count[i];
 
 	for (i = 0; i < size; i++)
 	{
