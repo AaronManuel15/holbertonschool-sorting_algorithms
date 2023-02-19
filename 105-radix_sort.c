@@ -35,17 +35,17 @@ size_t maxValueLen(int *array, size_t size)
  */
 void countingSort(int *array, size_t size, size_t place)
 {
-	size_t output[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	size_t count[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	size_t output[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	size_t *temp = malloc(sizeof(*array) * size);
 	size_t i;
 
-
 	for (i = 0; i < size; i++)
-		count[(array[i] / place) % 10]++;
-
-	for (i = 1; i <= size; i++)
-		output[i] += output[i - 1] + count[i - 1];
+	{
+		count[(array[i] % (place * 10) / place)]++;
+	}
+	for (i = 0; i < 9 ; i++)
+		output[i + 1] += output[i] + count[i];
 
 	for (i = 0; i < size; i++)
 	{
